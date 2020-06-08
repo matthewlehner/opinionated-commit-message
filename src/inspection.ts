@@ -14,13 +14,13 @@ function splitSubjectBody(message: string): MaybeSubjectBody {
   const result: MaybeSubjectBody = {errors: []};
 
   const lines = message.split('\n');
-  if (lines.length < 3) {
-    result.errors.push(
-      `Expected at least three lines (subject, empty, body), ` +
-        `but got: ${lines.length}`
-    );
-    return result;
-  }
+  // if (lines.length < 3) {
+  //   result.errors.push(
+  //     `Expected at least three lines (subject, empty, body), ` +
+  //       `but got: ${lines.length}`
+  //   );
+  //   return result;
+  // }
 
   if (lines[1].length !== 0) {
     result.errors.push(
